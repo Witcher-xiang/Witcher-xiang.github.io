@@ -71,10 +71,173 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/12/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-05-12T09:36:30.616Z" itemprop="datePublished">2023-05-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/12/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/12/hello-world/" data-id="clhkd6dim0000btoqhoe2h6pg" data-title="Hello World" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-日常：esm和csj" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" class="article-date">
+  <time class="dt-published" datetime="2023-05-11T14:33:18.000Z" itemprop="datePublished">2023-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/">esModuleInerop</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="ts-Config中的esModuleInterop选项"><a href="#ts-Config中的esModuleInterop选项" class="headerlink" title="ts Config中的esModuleInterop选项"></a>ts Config中的esModuleInterop选项</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/148081795">https://zhuanlan.zhihu.com/p/148081795</a></p>
+<p>在我们使用esm写代码时，tsc会给我们编译出最终是commonjs</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">TS</span>、babel 对 <span class="keyword">export</span> 变量的转译规则为：（代码经过简化）</span><br><span class="line"><span class="comment">// before</span></span><br><span class="line"> <span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">&quot;esm&quot;</span>;</span><br><span class="line"> <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">   <span class="attr">name</span>: <span class="string">&quot;esm default&quot;</span>,</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// after</span></span><br><span class="line"> <span class="built_in">exports</span>.<span class="property">__esModule</span> = <span class="literal">true</span>;</span><br><span class="line"> <span class="built_in">exports</span>.<span class="property">name</span> = <span class="string">&quot;esm&quot;</span>;</span><br><span class="line"> <span class="built_in">exports</span>[<span class="string">&quot;default&quot;</span>] = &#123;</span><br><span class="line">   <span class="attr">name</span>: <span class="string">&quot;esm default&quot;</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到：</p>
+<ul>
+<li>对于 export default 的变量，TS 会将其放在 module.exports 的 default 属性上</li>
+<li>对于 export 的变量，TS 会将其放在 module.exports 对应变量名的属性上</li>
+<li>额外给 module.exports 增加一个 __esModule: true 的属性，用来告诉编译器，这本来是一个 esm 模块</li>
+</ul>
+<p>当开启这个选项后，编译结果就变了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">mport <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">React</span>);</span><br><span class="line"> <span class="comment">// after 代码经过简化</span></span><br><span class="line"> <span class="keyword">var</span> react = <span class="title function_">__importDefault</span>(<span class="built_in">require</span>(<span class="string">&#x27;react&#x27;</span>));</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(react[<span class="string">&#x27;default&#x27;</span>]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="comment">// before</span></span><br><span class="line"> <span class="keyword">import</span> &#123;<span class="title class_">Component</span>&#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Component</span>);</span><br><span class="line"> <span class="comment">// after 代码经过简化</span></span><br><span class="line"> <span class="keyword">var</span> react = <span class="built_in">require</span>(<span class="string">&#x27;react&#x27;</span>);</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(react.<span class="property">Component</span>);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment">// before</span></span><br><span class="line"> <span class="keyword">import</span> * <span class="keyword">as</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">React</span>);</span><br><span class="line"> <span class="comment">// after 代码经过简化</span></span><br><span class="line"> <span class="keyword">var</span> react = <span class="title function_">_importStar</span>(<span class="built_in">require</span>(<span class="string">&#x27;react&#x27;</span>));</span><br><span class="line"> <span class="variable language_">console</span>.<span class="title function_">log</span>(react);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>将exports[“default”]替换成了函数，来帮助我们规避这个问题</p>
+<p>总结：在esm中使用commonJS模块时，需要添加这个配置，来改变转换规则，使得能在ESM中使用CMJ的包而不报错，TS、babel、webpack都有他们自己的处理机制</p>
+<h3 id="打一个包出来同时存在ESM和CMJ"><a href="#打一个包出来同时存在ESM和CMJ" class="headerlink" title="打一个包出来同时存在ESM和CMJ"></a>打一个包出来同时存在ESM和CMJ</h3><p><img src="/picture/20230512.jpg" alt="自动曝光"></p>
+<ul>
+<li>main为CMJ的入口</li>
+<li>module为ESM的入口</li>
+<li>type为.t.ds的入口</li>
+</ul>
+<p>优先级：一般情况下module 的优先级更高，具体可以看<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903862977953806#heading-5">这个文章</a></p>
+<p>另一个打包啊工具<a target="_blank" rel="noopener" href="https://tsup.egoist.dev/">tsup</a></p>
+<ul>
+<li>无需配置直接打包</li>
+<li>有坑，如果你有declare 为any的包，打.d.ts的包就会报错，不允许为存在any引入的包</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" data-id="clhkd6diy0006btoqfcw81uki" data-title="esModuleInerop" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-文章推荐：const" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" class="article-date">
+  <time class="dt-published" datetime="2023-05-08T15:10:59.000Z" itemprop="datePublished">2023-05-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/">文章推荐：The “const” Deception</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="The-“const”-Deception"><a href="#The-“const”-Deception" class="headerlink" title="The “const” Deception"></a><a target="_blank" rel="noopener" href="https://www.joshwcomeau.com/javascript/the-const-deception/">The “const” Deception</a></h3><p>我们都知道const对于引用类型中的属性改变是无法限制的，文章介绍了如果我想在使用const时，想限制这一点可以使用Object.freeze()方法达到“防弹”效果。在Ts中你也可以直接使用as const断言来达到类似效果，除此之外使用大白话讲解了在js中assignment和mutation的区别加深你对js的理解</p>
+<ul>
+<li>使用Object.freeze()去除const 可能会被修改属性的情况</li>
+<li>assignment一般指的是let或者const声明，或者是let改变时的情况</li>
+<li>mutation 则是const 修改了引用类型的属性</li>
+<li>在js中基本类型的改变不是修改，而是重新引用。比如let a &#x3D; 1 改成2 是重新创建了2而不是修改，因此基本类型不能被修改，不能出现 1 &#x3D; 2的情况</li>
+</ul>
+<p>PS：他这个博客挺好玩的还会突然跳小人</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" data-id="clhkd6diw0004btoq2wnha639" data-title="文章推荐：The “const” Deception" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-vite" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/05/vite/" class="article-date">
-  <time class="dt-published" datetime="2023-05-05T03:25:12.000Z" itemprop="datePublished">2023-05-05</time>
+  <time class="dt-published" datetime="2023-05-05T11:25:12.000Z" itemprop="datePublished">2023-05-05</time>
 </a>
     
   </div>
@@ -94,16 +257,24 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>推荐回答：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/477139054/answer/2156019180">尤大的回应</a></p>
-<p>vite走的是no-bundle路线，他不像webpack走babel打包出很多bundle，然后直接从浏览器中引入这些bundle，vite则不需要走bundle，他经过基础的编译直接使用浏览器自带的module引入（script标签中type 为module (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)%EF%BC%89">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)）</a></p>
+<p>vite走的是no-bundle路线，他不像webpack走babel打包出很多bundle，然后直接从浏览器中引入这些bundle，vite则不需要走bundle，他直接使用浏览器支持的ESModule引入（script标签中type 为module (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)%EF%BC%89">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)）</a></p>
+<ul>
+<li>能解析依赖关系，对于monorepo有良好的支持</li>
+<li>开发环境下使用ESM，代替打包，但有预构建功能，可以将 CommonJS &#x2F; UMD 转换为 ESM 格式</li>
+<li>ts自动配置，但不执行检查</li>
+</ul>
 <p>今日好文：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/DHeayzVwF_K9Oi9w_ae1lQ">何为技术</a></p>
+<p>vite开发环境：走预构建，将一个包的内部模块全部转化为一个ESmodule，目的是为了一个module就只发一个http请求</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/05/vite/" data-id="clhbczie90001becm0qhx9yhe" data-title="vite" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/05/vite/" data-id="clhkd6dir0001btoq4u314ato" data-title="vite" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li></ul>
+
     </footer>
   </div>
   
@@ -115,7 +286,7 @@
     <article id="post-设计模式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time class="dt-published" datetime="2023-04-28T02:36:08.000Z" itemprop="datePublished">2023-04-28</time>
+  <time class="dt-published" datetime="2023-04-28T10:36:08.000Z" itemprop="datePublished">2023-04-28</time>
 </a>
     
   </div>
@@ -153,11 +324,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="clhbcziek000dbecmaav57jtb" data-title="设计模式" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="clhkd6dj5000gbtoq8m6j5x3m" data-title="设计模式" class="article-share-link">分享</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">工作中的设计模式</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
 
     </footer>
   </div>
@@ -170,7 +341,7 @@
     <article id="post-图片预加载" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" class="article-date">
-  <time class="dt-published" datetime="2023-04-24T14:18:19.000Z" itemprop="datePublished">2023-04-24</time>
+  <time class="dt-published" datetime="2023-04-24T22:18:19.000Z" itemprop="datePublished">2023-04-24</time>
 </a>
     
   </div>
@@ -200,10 +371,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" data-id="clhbczieb0002becmdfy59abc" data-title="图片预加载" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" data-id="clhkd6dit0002btoq2s7lb3hr" data-title="图片预加载" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hook/" rel="tag">hook</a></li></ul>
+
     </footer>
   </div>
   
@@ -215,7 +388,7 @@
     <article id="post-日常：埋点的设计思考" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" class="article-date">
-  <time class="dt-published" datetime="2023-04-23T11:52:19.000Z" itemprop="datePublished">2023-04-23</time>
+  <time class="dt-published" datetime="2023-04-23T19:52:19.000Z" itemprop="datePublished">2023-04-23</time>
 </a>
     
   </div>
@@ -244,14 +417,18 @@
 <p>总结：<br>我们把这几个观点抽象化就是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">重复代码：如果发现某些代码片段在多个地方重复出现，可以考虑将其抽象为一个函数或组件以提高复用性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">可读性：如果代码段过于复杂，抽象成一个函数或组件可以提高可读性和维护性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">项目规模：如果是一个大型项目，合理的抽象可以帮助团队协作和代码的可维护性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">预测变化：如果预期某些功能可能发生变化，适当的抽象有助于减少对整体代码的影响。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">避免过度抽象：过度抽象可能导致难以理解的代码结构，尤其是在小型项目中。要避免不必要的抽象，确保抽象的实施有实际的好处。</span><br></pre></td></tr></table></figure>
 
+
+<p>简单判断方法：</p>
+<p>如果出现两段代码完全重复，或者共享同一个处理逻辑，那么首先问问自己，如果其中一个因为某种需求变更而发生变化，是否必然会引起另一处也发生相同的改变？如果答案是肯定的，而且这种重复或共享次数在当前大于等于3，那么就要做抽象，否则一定不要做</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" data-id="clhbd0qt9000lbecmf6r2c6gh" data-title="日常：业务埋点的设计和思考" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" data-id="clhkd6dj3000cbtoqa0o856ep" data-title="日常：业务埋点的设计和思考" class="article-share-link">分享</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
 
     </footer>
   </div>
@@ -264,7 +441,7 @@
     <article id="post-日常：ci-cd" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/" class="article-date">
-  <time class="dt-published" datetime="2023-04-21T15:13:42.000Z" itemprop="datePublished">2023-04-21</time>
+  <time class="dt-published" datetime="2023-04-21T23:13:42.000Z" itemprop="datePublished">2023-04-21</time>
 </a>
     
   </div>
@@ -295,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/" data-id="clhbczied0004becmhz1p44ks" data-title="日常：ci/cd" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/" data-id="clhkd6dix0005btoq3hw2caiu" data-title="日常：ci/cd" class="article-share-link">分享</a>
       
       
       
@@ -312,7 +489,7 @@
     <article id="post-日常：记录一下埋点时遇到的一些问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="article-date">
-  <time class="dt-published" datetime="2023-04-18T15:32:32.000Z" itemprop="datePublished">2023-04-18</time>
+  <time class="dt-published" datetime="2023-04-18T23:32:32.000Z" itemprop="datePublished">2023-04-18</time>
 </a>
     
   </div>
@@ -343,7 +520,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" data-id="clhbcziej000bbecm6j192jg2" data-title="日常：记录一下埋点时遇到的一些问题" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" data-id="clhkd6dj4000ebtoqbupf5o0n" data-title="日常：记录一下埋点时遇到的一些问题" class="article-share-link">分享</a>
       
       
       
@@ -360,7 +537,7 @@
     <article id="post-日常：monorepo中使用changeset进行多包的管理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9Amonorepo%E4%B8%AD%E4%BD%BF%E7%94%A8changeset%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/" class="article-date">
-  <time class="dt-published" datetime="2023-04-18T15:22:23.000Z" itemprop="datePublished">2023-04-18</time>
+  <time class="dt-published" datetime="2023-04-18T23:22:23.000Z" itemprop="datePublished">2023-04-18</time>
 </a>
     
   </div>
@@ -383,7 +560,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9Amonorepo%E4%B8%AD%E4%BD%BF%E7%94%A8changeset%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/" data-id="clhbcziec0003becmgk61gzu7" data-title="日常：monorepo中使用changeset进行多包的管理" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9Amonorepo%E4%B8%AD%E4%BD%BF%E7%94%A8changeset%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/" data-id="clhkd6dj00009btoq8pht3ej6" data-title="日常：monorepo中使用changeset进行多包的管理" class="article-share-link">分享</a>
       
       
       
@@ -397,106 +574,12 @@
 
 
   
-    <article id="post-日常：react中不使用key遇到的一个问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/17/%E6%97%A5%E5%B8%B8%EF%BC%9Areact%E4%B8%AD%E4%B8%8D%E4%BD%BF%E7%94%A8key%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" class="article-date">
-  <time class="dt-published" datetime="2023-04-17T15:42:55.000Z" itemprop="datePublished">2023-04-17</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/17/%E6%97%A5%E5%B8%B8%EF%BC%9Areact%E4%B8%AD%E4%B8%8D%E4%BD%BF%E7%94%A8key%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/">日常：react中不使用key遇到的一个问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>今天遇到个key值的问题，我们一般给组件加key是这样</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Xxx.map((key)=&gt;(&lt;div key=&#123;key&#125;&gt;&lt;/div&gt;))</span><br></pre></td></tr></table></figure>
-<p>最外层组件加key，用于react的diff算法优化性能。但是现在这个VideoBox是我自己封装的自定义组件没有map，所以一般代码提示不会提示你加key<br><img src="/picture/20230418005129.png" alt="组件截图"></p>
-<p>当我没有给组件添加key时，再切换这个videoBox时出现了一定的延时，之前的组件没有被销毁，而是在video加载后才出现的，<br>联系之前key的作用我们可以得出一个结论，因为这里的key使得组件被即使销毁替换（即使video没有渲染好），但你不加key要等到video渲染好才上屏（可以类比看出video是有状态的，但开始渲染并不会主动更新），因此我们可以得出一个结论，即使我们没有使用map，但组件通过setState或者props进行重复切换渲染时，尤其是像video标签这种，资源加载完成后才渲染的组件，最好加上key，使得他资源更新时组件即可销毁</p>
-<p>在浏览器中，<code>&lt;video&gt;</code> 元素和 <code>&lt;audio&gt;</code> 元素都是动态加载的，这意味着它们是在资源加载完成后才更新的。<br>因此在有视频切换时，我们尽量去使用组件去渲染，而不是去修改video的s中的地址</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> images = <span class="title function_">useMemo</span>(</span><br><span class="line">    <span class="function">() =&gt;</span> [</span><br><span class="line">      ...<span class="variable constant_">SIDE_LIST</span>.<span class="title function_">flatMap</span>(<span class="function">(<span class="params">&#123; selected, unSelect &#125;</span>) =&gt;</span> [selected, unSelect]),</span><br><span class="line">      ...<span class="variable constant_">VIRTUAL_PERSONALIZE_MAP</span>.<span class="property">hair</span>.<span class="property">matchList</span>.<span class="title function_">flatMap</span>(<span class="function">(<span class="params">&#123; displayMan, displayWoman &#125;</span>) =&gt;</span> [displayMan, displayWoman]),</span><br><span class="line">      ...<span class="variable constant_">VIRTUAL_PERSONALIZE_MAP</span>.<span class="property">face</span>.<span class="property">matchList</span>.<span class="title function_">flatMap</span>(<span class="function">(<span class="params">&#123; displayMan, displayWoman &#125;</span>) =&gt;</span> [displayMan, displayWoman]),</span><br><span class="line">      ...<span class="variable constant_">VIRTUAL_PERSONALIZE_MAP</span>.<span class="property">cloth</span>.<span class="property">matchList</span>.<span class="title function_">flatMap</span>(<span class="function">(<span class="params">&#123; displayMan, displayWoman &#125;</span>) =&gt;</span> [displayMan, displayWoman]),</span><br><span class="line">    ],</span><br><span class="line">    []</span><br><span class="line">  );</span><br><span class="line">  <span class="title function_">useImagePreload</span>(&#123;</span><br><span class="line">    images,</span><br><span class="line">    <span class="attr">trigger</span>: !!isInViewport, <span class="comment">// 判断当前元素是否在视窗内</span></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/17/%E6%97%A5%E5%B8%B8%EF%BC%9Areact%E4%B8%AD%E4%B8%8D%E4%BD%BF%E7%94%A8key%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" data-id="clhbczieg0006becm47ds5aov" data-title="日常：react中不使用key遇到的一个问题" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/17/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-04-17T12:15:09.428Z" itemprop="datePublished">2023-04-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/17/hello-world/" data-id="clhbczie50000becm1cnp6hxs" data-title="Hello World" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
 
 </section>
         
@@ -509,7 +592,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">工作中的设计模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hook/" rel="tag">hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
     </div>
   </div>
 
@@ -519,7 +602,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">工作中的设计模式</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a>
+      <a href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">-技术记录</a> <a href="/tags/hook/" style="font-size: 10px;">hook</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">文章推荐</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 15px;">设计模式</a>
     </div>
   </div>
 
@@ -541,23 +624,23 @@
       <ul>
         
           <li>
+            <a href="/2023/05/12/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/">esModuleInerop</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/">文章推荐：The “const” Deception</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/05/vite/">vite</a>
           </li>
         
           <li>
             <a href="/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/">图片预加载</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">日常：业务埋点的设计和思考</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/">日常：ci/cd</a>
           </li>
         
       </ul>
