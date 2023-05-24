@@ -71,6 +71,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-日常：ci-cd" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/" class="article-date">
+  <time class="dt-published" datetime="2023-04-21T23:13:42.000Z" itemprop="datePublished">2023-04-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/">日常：ci/cd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="CI-x2F-CD"><a href="#CI-x2F-CD" class="headerlink" title="CI&#x2F;CD"></a>CI&#x2F;CD</h3><p>CI：持续部署</p>
+<p>CD：持续集成</p>
+<p>CI: 通过质测平台进行监控，当检测到配置的目标仓库有变动时（Merge后），就会执行你配置好的shell脚本，比如yarn run docker，帮你打包构建镜像然后推到目标镜像位置，到此步 我们还差让镜像自动重启</p>
+<p>对于我们使用的monenrepo的处理是写判断语句，挨个执行，如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yarn install</span><br><span class="line">if [ $targetBranch = $devMain ]</span><br><span class="line">then</span><br><span class="line">    echo &quot;是devMain环境&quot;</span><br><span class="line">    yarn run docker:admin dev</span><br><span class="line">  yarn run docker:xxx dev</span><br><span class="line">  yarn run docker:xxx dev</span><br><span class="line">  yarn run docker:xxx dev</span><br><span class="line">  yarn run docker:xxx dev</span><br><span class="line">elif [ $targetBranch = $qaMain ]</span><br></pre></td></tr></table></figure>
+<p>但这样的坏处如果只有一台机子就会很很慢</p>
+<p>CD：<br>也在质测平台中，叫持续部署<br>首先选择项目，输入应用名，代码仓库和分支名称，以及部署的镜像名称，他会监控是否有镜像推送有的话就自动重启</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>CI+CD &#x3D; 代码merge后-》打镜像 -》 镜像推送</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/21/%E6%97%A5%E5%B8%B8%EF%BC%9Aci-cd/" data-id="cli1coz760006bvq45b0xdm7h" data-title="日常：ci/cd" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-日常：记录一下埋点时遇到的一些问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="article-date">
@@ -105,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" data-id="clhznepxv000gbyouem0h1s34" data-title="日常：记录一下埋点时遇到的一些问题" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9A%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%9F%8B%E7%82%B9%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" data-id="cli1coz7g000ibvq42k6a8128" data-title="日常：记录一下埋点时遇到的一些问题" class="article-share-link">分享</a>
       
       
       
@@ -145,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9Amonorepo%E4%B8%AD%E4%BD%BF%E7%94%A8changeset%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/" data-id="clhznepxp000abyoubf7xe98d" data-title="日常：monorepo中使用changeset进行多包的管理" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/18/%E6%97%A5%E5%B8%B8%EF%BC%9Amonorepo%E4%B8%AD%E4%BD%BF%E7%94%A8changeset%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%8C%85%E7%9A%84%E7%AE%A1%E7%90%86/" data-id="cli1coz79000abvq4da534j2k" data-title="日常：monorepo中使用changeset进行多包的管理" class="article-share-link">分享</a>
       
       
       
@@ -193,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/17/%E6%97%A5%E5%B8%B8%EF%BC%9Areact%E4%B8%AD%E4%B8%8D%E4%BD%BF%E7%94%A8key%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" data-id="clhznepxs000cbyou1vb69fec" data-title="日常：react中不使用key遇到的一个问题" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/17/%E6%97%A5%E5%B8%B8%EF%BC%9Areact%E4%B8%AD%E4%B8%8D%E4%BD%BF%E7%94%A8key%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98/" data-id="cli1coz7c000cbvq44tko8k2k" data-title="日常：react中不使用key遇到的一个问题" class="article-share-link">分享</a>
       
       
       
@@ -257,7 +305,11 @@
       <ul>
         
           <li>
-            <a href="/2023/05/23/hello-world/">Hello World</a>
+            <a href="/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">日常：关于编码问题</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/hello-world/">Hello World</a>
           </li>
         
           <li>
@@ -270,10 +322,6 @@
         
           <li>
             <a href="/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/">esModuleInerop</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/">文章推荐：The “const” Deception</a>
           </li>
         
       </ul>
