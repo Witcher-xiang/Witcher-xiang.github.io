@@ -71,6 +71,146 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/06/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-06-06T07:27:23.263Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/06/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/06/hello-world/" data-id="clijykpvv0000b4os1dr6cjob" data-title="Hello World" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-monorepo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/05/monorepo/" class="article-date">
+  <time class="dt-published" datetime="2023-06-05T17:29:17.000Z" itemprop="datePublished">2023-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/05/monorepo/">monorepo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7215886869199896637">monorepo</a><br>1、nx：可以看作一个脚手架，解决代码重用性（monorepo），通过命令行添加修改子仓库,提供了很多插件、置的构建和部署工具（更侧重于项目的管理）<br>例：<br> 执行命令 npx create-nx-workspace@latest 可以直接使用nx创建一个你需要的模版，如公司项目中即使用nx进行打包<br> Nx 仅管理 npm 脚本的调度和缓存</p>
+<p> nx是什么？有什么作用<br>相比其他monorepo有什么优势，为什么选择了nx？<br>快速的任务调度、任务流水线、缓存，内嵌的依赖管理系统</p>
+<p>项目中用到了他的那些功能<br>任务调度：run-many，执行所有命令项,nx 打包</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nx build:dev admin --skip-nx-cache</span><br></pre></td></tr></table></figure>
+
+<p>任务流水线： 对于执行build命令的项目A，会将项目A中所使用的依赖项（只要带build的都会提前打包出来）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;build&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;dependsOn&quot;</span>: [<span class="string">&quot;^build&quot;</span>]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、lenra：一个比nx功能少的脚手架，可以和nx结合使用，他主要做三件事（更侧重于npm包的管理）<br>（1）它为单个包或多个包运行命令 ( lerna run) 一个依赖包更新，其他依赖此包的包&#x2F;项目无需安装最新版本，因为 Lerna 自动 Link<br>（2）它管理依赖项 ( lerna bootstrap) 多个包都使用相同版本的依赖包时，Lerna 优先将依赖包安装在根目录<br>（3）它发布你的包，处理版本管理，并生成变更日志 ( lerna publish)  Lerna 通过 Git 检测代码变动，自动发版、更新版本号；两种模式管理多个依赖包的版本号</p>
+<p>总结：一般lenra会结合yarn workspace一起使用，主要原因在于lenra更专注于项目内发包之间发布时的依赖关系（发布问题）,而yarn workspace则更加关注同一个代码仓库下npm包的关系（npm依赖问题）</p>
+<p>我们平时装依赖都会yarn add -W xx ，其中-W的作用是将 xx 添加到工作区的 “package.json” 文件中。”-W” 参数告诉 Yarn 将 xx 添加为工作区的共享依赖项，这意味着每个项目都可以使用该依赖项，而不需要在每个项目中单独安装。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/05/monorepo/" data-id="clijykpw10001b4osdeyo00ey" data-title="monorepo" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-贝塞尔曲线" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/" class="article-date">
+  <time class="dt-published" datetime="2023-06-05T16:41:22.000Z" itemprop="datePublished">2023-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">贝塞尔曲线</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/" data-id="clijykpwo000qb4os2lwggdnq" data-title="贝塞尔曲线" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-日常：关于编码问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" class="article-date">
@@ -106,58 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" data-id="cli1coz7d000ebvq4bn5i6uqy" data-title="日常：关于编码问题" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/24/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-24T06:55:03.244Z" itemprop="datePublished">2023-05-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/hello-world/" data-id="cli1coz6r0000bvq4e7yj1el2" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" data-id="clijykpwi000gb4osfwbhfzob" data-title="日常：关于编码问题" class="article-share-link">分享</a>
       
       
       
@@ -195,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/" data-id="cli1coz7i000kbvq40r9pfbsq" data-title="简约之美" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/" data-id="clijykpwm000mb4osahav042j" data-title="简约之美" class="article-share-link">分享</a>
       
       
       
@@ -237,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/rebase/" data-id="cli1coz6x0001bvq485zl09wb" data-title="git rebase" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/22/rebase/" data-id="clijykpw40002b4osdkte0jla" data-title="git rebase" class="article-share-link">分享</a>
       
       
       
@@ -303,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" data-id="cli1coz780009bvq43evw80gd" data-title="esModuleInerop" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" data-id="clijykpwd000ab4os92k1a70s" data-title="esModuleInerop" class="article-share-link">分享</a>
       
       
       
@@ -349,7 +438,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" data-id="cli1coz750005bvq44phsduun" data-title="文章推荐：The “const” Deception" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" data-id="clijykpwa0006b4osg37t5iz6" data-title="文章推荐：The “const” Deception" class="article-share-link">分享</a>
       
       
       
@@ -398,7 +487,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/05/vite/" data-id="cli1coz6z0002bvq476pngmvz" data-title="vite" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/05/vite/" data-id="clijykpw70004b4os05xohx9l" data-title="vite" class="article-share-link">分享</a>
       
       
       
@@ -453,111 +542,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="cli1coz7j000mbvq4727j56z8" data-title="设计模式" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="clijykpwn000nb4osgz1x1mha" data-title="设计模式" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-图片预加载" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" class="article-date">
-  <time class="dt-published" datetime="2023-04-24T22:18:19.000Z" itemprop="datePublished">2023-04-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/">图片预加载</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>之前有这样一个场景，我的图片需要预先加载</p>
-<h3 id="方案1：写了一个预加载的hook在一进页面就会加载"><a href="#方案1：写了一个预加载的hook在一进页面就会加载" class="headerlink" title="方案1：写了一个预加载的hook在一进页面就会加载"></a>方案1：写了一个预加载的hook在一进页面就会加载</h3><p>因为是页面有非常多的图片，这个预加载的图片一多就会导致页面渲染阻塞</p>
-<p>这里留了一个问题：网络进程的加载会影响页面的渲染么？</p>
-<h3 id="方案2：多增加了一个triger字段，当triger为true，并且未请求时，才会预先加载，这样就是下滑到对应位置进行预先加载"><a href="#方案2：多增加了一个triger字段，当triger为true，并且未请求时，才会预先加载，这样就是下滑到对应位置进行预先加载" class="headerlink" title="方案2：多增加了一个triger字段，当triger为true，并且未请求时，才会预先加载，这样就是下滑到对应位置进行预先加载"></a>方案2：多增加了一个triger字段，当triger为true，并且未请求时，才会预先加载，这样就是下滑到对应位置进行预先加载</h3><h3 id="方案3-发现usEffect会多次重复执行，原来是里面使用了useEffect，传入的图片数组每当创建时都会重新创建"><a href="#方案3-发现usEffect会多次重复执行，原来是里面使用了useEffect，传入的图片数组每当创建时都会重新创建" class="headerlink" title="方案3: 发现usEffect会多次重复执行，原来是里面使用了useEffect，传入的图片数组每当创建时都会重新创建"></a>方案3: 发现usEffect会多次重复执行，原来是里面使用了useEffect，传入的图片数组每当创建时都会重新创建</h3><p>解决方法<br>（1）使用useDeepEffect，每次会进行深度对比,如下图<br>（2）对传入的图片使用<strong>useMemo</strong>保证图片不在改变<br>hook如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; useRef, useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useDeepCompareEffect &#125; <span class="keyword">from</span> <span class="string">&#x27;@fuxi/eevee-hooks&#x27;</span>;</span><br><span class="line"></span><br><span class="line">interface <span class="title class_">UseImagePreloadProps</span> &#123;</span><br><span class="line">  <span class="attr">images</span>: string[];</span><br><span class="line">  trigger?: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type <span class="title class_">ResultType</span> = &#123;</span><br><span class="line">  [<span class="attr">key</span>: string]: <span class="title class_">ImageState</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">type <span class="title class_">ImageState</span> = <span class="string">&#x27;loaded&#x27;</span> | <span class="string">&#x27;error&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">useImagePreload</span> = (<span class="params">&#123; images, trigger = <span class="literal">true</span> &#125;: UseImagePreloadProps</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> [isLoading, setIsLoading] = useState&lt;boolean&gt;(<span class="literal">true</span>);</span><br><span class="line">  <span class="keyword">const</span> [imageLoadState, setImageLoadState] = useState&lt;<span class="title class_">Record</span>&lt;string, <span class="title class_">ImageState</span>&gt;&gt;(&#123;&#125;);</span><br><span class="line">  <span class="keyword">let</span> requestedRef = <span class="title function_">useRef</span>(&#123;</span><br><span class="line">    <span class="attr">hasRequested</span>: <span class="literal">false</span>,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useDeepCompareEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (trigger &amp;&amp; !requestedRef.<span class="property">current</span>.<span class="property">hasRequested</span>) &#123;</span><br><span class="line">      <span class="title function_">fetchImgs</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, [images, trigger]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">fetchImgs</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="title function_">setIsLoading</span>(<span class="literal">true</span>);</span><br><span class="line">    <span class="keyword">const</span> promises = images.<span class="title function_">map</span>(</span><br><span class="line">      <span class="function"><span class="params">image</span> =&gt;</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResultType</span>&gt;(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">const</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">          img.<span class="property">onload</span> = <span class="function">() =&gt;</span></span><br><span class="line">            <span class="title function_">resolve</span>(&#123;</span><br><span class="line">              [image]: <span class="string">&#x27;loaded&#x27;</span>,</span><br><span class="line">            &#125;);</span><br><span class="line">          img.<span class="property">onerror</span> = <span class="function">() =&gt;</span></span><br><span class="line">            <span class="title function_">resolve</span>(&#123;</span><br><span class="line">              [image]: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">            &#125;);</span><br><span class="line">          img.<span class="property">src</span> = image;</span><br><span class="line">        &#125;)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="title class_">Promise</span>.<span class="title function_">all</span>(promises).<span class="title function_">then</span>(<span class="function"><span class="params">results</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> <span class="attr">newState</span>: <span class="title class_">Record</span>&lt;string, <span class="title class_">ImageState</span>&gt; = &#123;&#125;;</span><br><span class="line">      results.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item: ResultType</span>) =&gt;</span> &#123;</span><br><span class="line">        newState = &#123; ...newState, ...item &#125;;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      <span class="title function_">setImageLoadState</span>(newState);</span><br><span class="line">      <span class="title function_">setIsLoading</span>(<span class="literal">false</span>);</span><br><span class="line">      requestedRef.<span class="property">current</span>.<span class="property">hasRequested</span> = <span class="literal">true</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123; isLoading, imageLoadState &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> useImagePreload;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" data-id="cli1coz730004bvq42vol1100" data-title="图片预加载" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hook/" rel="tag">hook</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-日常：埋点的设计思考" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" class="article-date">
-  <time class="dt-published" datetime="2023-04-23T19:52:19.000Z" itemprop="datePublished">2023-04-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/">日常：业务埋点的设计和思考</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>这次我负责将埋点接入到我们的业务，我是这么做的：<br>所有的埋点字段由 ued 提供-》我维护一个大枚举，将 excel 表中的枚举写入-》然后再维护一个业务 Map，业务 Map 中的 key 值构成比较复杂，可能是路由，也可能是某些业务中存在枚举的 key，他的目的是为了方便直接从业务中取得埋点字段的类型，但是在有了两层 Map 的情况下又不可避免的出现了第三种 map</p>
-<p>第三种 map 的原因：<br>首先每个埋点的值都是唯一的，但是有一个组件，完全相同的组件使用在不同的页面，每个页面的埋点都是不一样的，因此我需要新建立一个和之前第二层 Map 不同的数据结构来存储</p>
-<p>这个方案给同事听了之后说多增加第一层维护 Map 的成本，这个应该交给平台，他应该存在一个接口，可以返回所有的已经配置好的埋点，而不是我手动去维护第一层的 Map<br><img src="/picture/20230423.png" alt="组件截图"></p>
-<p>如此设计虽然我写的时候很舒服，但是多一层抽象就带来很高的维护成本，<strong>*后来者学习重新学习一遍你的流程</strong>，像是埋点这种很通用的，应该就给一个发送出去不应该构建更高级的抽象<br>这难免让我思考一个问题，何时抽象，何时不抽象</p>
-<h3 id="1、抽象的好处-gt-耦合的后果"><a href="#1、抽象的好处-gt-耦合的后果" class="headerlink" title="1、抽象的好处&gt;耦合的后果"></a>1、抽象的好处&gt;耦合的后果</h3><p>这个视频提到了这个观点<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TT411m7Ny/?spm_id_from=333.880.my_history.page.click">视频</a>。抽象并非百利而无一害，作者观点说抽象越高你的耦合就会越高，其实我觉得可以理解为过度抽象化带来的可维护性变差增加复杂性和开发时间</p>
-<h3 id="2、抽象-x3D-提取重复的代码"><a href="#2、抽象-x3D-提取重复的代码" class="headerlink" title="2、抽象 !&#x3D; 提取重复的代码"></a>2、抽象 !&#x3D; 提取重复的代码</h3><p>需要甄别重复代码，真的是因为他们是一套设计机制，还是因为仅仅是重复代码才做抽象，其实理解开来还是可维护性，未来是代码否增加拓展</p>
-<h3 id="3、项目规模和共通认识"><a href="#3、项目规模和共通认识" class="headerlink" title="3、项目规模和共通认识"></a>3、项目规模和共通认识</h3><p>如果是一个大型项目，合理的抽象可以帮助团队协作和代码的可维护性。在小型项目中，尤其是在埋点这种有一定共同性的设计中，要避免不必要的抽象，确保抽象的实施有实际的好处。</p>
-<p>总结：<br>我们把这几个观点抽象化就是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">重复代码：如果发现某些代码片段在多个地方重复出现，可以考虑将其抽象为一个函数或组件以提高复用性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">可读性：如果代码段过于复杂，抽象成一个函数或组件可以提高可读性和维护性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">项目规模：如果是一个大型项目，合理的抽象可以帮助团队协作和代码的可维护性。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">预测变化：如果预期某些功能可能发生变化，适当的抽象有助于减少对整体代码的影响。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">避免过度抽象：过度抽象可能导致难以理解的代码结构，尤其是在小型项目中。要避免不必要的抽象，确保抽象的实施有实际的好处。</span><br></pre></td></tr></table></figure>
-
-
-<p>简单判断方法：</p>
-<p>如果出现两段代码完全重复，或者共享同一个处理逻辑，那么首先问问自己，如果其中一个因为某种需求变更而发生变化，是否必然会引起另一处也发生相同的改变？如果答案是肯定的，而且这种重复或共享次数在当前大于等于3，那么就要做抽象，否则一定不要做</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/23/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%9F%8B%E7%82%B9%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83/" data-id="cli1coz7f000gbvq4bj656pc9" data-title="日常：业务埋点的设计和思考" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
 
     </footer>
   </div>
@@ -585,7 +574,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hook/" rel="tag">hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hook/" rel="tag">hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
     </div>
   </div>
 
@@ -595,7 +584,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">-技术记录</a> <a href="/tags/hook/" style="font-size: 10px;">hook</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">文章推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 15px;">设计模式</a>
+      <a href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">-技术记录</a> <a href="/tags/hook/" style="font-size: 10px;">hook</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" style="font-size: 10px;">工程化</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">文章推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 15px;">设计模式</a>
     </div>
   </div>
 
@@ -604,7 +593,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li></ul>
     </div>
   </div>
 
@@ -617,23 +606,23 @@
       <ul>
         
           <li>
+            <a href="/2023/06/06/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/05/monorepo/">monorepo</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">贝塞尔曲线</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">日常：关于编码问题</a>
           </li>
         
           <li>
-            <a href="/2023/05/24/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
             <a href="/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/">简约之美</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/22/rebase/">git rebase</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/">esModuleInerop</a>
           </li>
         
       </ul>
