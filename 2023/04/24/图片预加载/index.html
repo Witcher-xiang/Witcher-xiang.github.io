@@ -14,7 +14,7 @@
 <meta property="og:description" content="之前有这样一个场景，我的图片需要预先加载 方案1：写了一个预加载的hook在一进页面就会加载因为是页面有非常多的图片，这个预加载的图片一多就会导致页面渲染阻塞 这里留了一个问题：网络进程的加载会影响页面的渲染么？ 方案2：多增加了一个triger字段，当triger为true，并且未请求时，才会预先加载，这样就是下滑到对应位置进行预先加载方案3: 发现usEffect会多次重复执行，原来是里面使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-24T22:18:19.000Z">
-<meta property="article:modified_time" content="2023-06-06T07:27:23.263Z">
+<meta property="article:modified_time" content="2023-06-12T03:08:09.496Z">
 <meta property="article:author" content="bryceyxwangs">
 <meta property="article:tag" content="hook">
 <meta name="twitter:card" content="summary">
@@ -107,7 +107,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" data-id="clijykpw90005b4os1c4hbet1" data-title="图片预加载" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/04/24/%E5%9B%BE%E7%89%87%E9%A2%84%E5%8A%A0%E8%BD%BD/" data-id="clis9ykqr0005bkoq1wbifgdk" data-title="图片预加载" class="article-share-link">分享</a>
       
       
       
@@ -183,7 +183,11 @@
       <ul>
         
           <li>
-            <a href="/2023/06/06/hello-world/">Hello World</a>
+            <a href="/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/">被认为是有害的</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/12/hello-world/">Hello World</a>
           </li>
         
           <li>
@@ -196,10 +200,6 @@
         
           <li>
             <a href="/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">日常：关于编码问题</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/">简约之美</a>
           </li>
         
       </ul>
