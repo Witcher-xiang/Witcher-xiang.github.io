@@ -71,6 +71,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-docker" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/04/docker/" class="article-date">
+  <time class="dt-published" datetime="2023-07-04T14:38:34.000Z" itemprop="datePublished">2023-07-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/04/docker/">docker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我有一个这样的需求，我需要在本地启动一个前端项目，这个前端项目会访问后端接口，然后直接部署在我开发的机器上，后端可以直接访问<br>1、docker怎么部署一个前端服务<br>一般来说需要一个服务挂载我们的前端html，一般采用nginx</p>
+<p>PS：不能通过直接访问容器中的html进行部署，只能通过挂载http服务进行访问</p>
+<p>2、跨域问题怎么解决<br>直接使用nginx做反向代理即可 前端项目 -&gt; nginx -&gt; 客户端（你能从network里看到，请求的是部署的IP，其实打的就是nginx服务器）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/04/docker/" data-id="cljnxzx980000c2oz7sxe2tva" data-title="docker" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/07/04/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-07-04T07:01:55.173Z" itemprop="datePublished">2023-07-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/07/04/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/07/04/hello-world/" data-id="cljnxzx9d0001c2oz59m0a6u1" data-title="Hello World" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="日常:export-被认为是有害的" class="h-entry article article-type-日常:export" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/" class="article-date">
@@ -105,58 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/" data-id="clis9zu7q000ndup15bsi33ho" data-title="被认为是有害的" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/12/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-06-12T03:09:19.272Z" itemprop="datePublished">2023-06-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/12/hello-world/" data-id="clis9zu730000dup18qr3cgog" data-title="Hello World" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/" data-id="cljnxzx9w000qc2oz8utj8llp" data-title="被认为是有害的" class="article-share-link">分享</a>
       
       
       
@@ -205,7 +248,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/05/monorepo/" data-id="clis9zu780001dup17eik8gam" data-title="monorepo" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/06/05/monorepo/" data-id="cljnxzx9h0003c2oz4708d737" data-title="monorepo" class="article-share-link">分享</a>
       
       
       
@@ -245,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/" data-id="clis9zu7s000rdup16rf82rmc" data-title="贝塞尔曲线" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/" data-id="cljnxzx9y000uc2ozgmqkcb9g" data-title="贝塞尔曲线" class="article-share-link">分享</a>
       
       
       
@@ -292,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" data-id="clis9zu7m000gdup11rju0wv2" data-title="日常：关于编码问题" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/" data-id="cljnxzx9s000jc2oz7a8335do" data-title="日常：关于编码问题" class="article-share-link">分享</a>
       
       
       
@@ -330,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/" data-id="clis9zu7p000mdup1c1ma6qq4" data-title="简约之美" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/22/%E7%AE%80%E7%BA%A6%E4%B9%8B%E7%BE%8E/" data-id="cljnxzx9v000pc2oz9w63ec5t" data-title="简约之美" class="article-share-link">分享</a>
       
       
       
@@ -372,7 +415,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/22/rebase/" data-id="clis9zu7a0002dup1gobe2uyz" data-title="git rebase" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/22/rebase/" data-id="cljnxzx9i0004c2oz8o6j19zz" data-title="git rebase" class="article-share-link">分享</a>
       
       
       
@@ -438,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" data-id="clis9zu7h000adup11e21a6zy" data-title="esModuleInerop" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/11/%E6%97%A5%E5%B8%B8%EF%BC%9Aesm%E5%92%8Ccsj/" data-id="cljnxzx9o000dc2oz7gkg92vc" data-title="esModuleInerop" class="article-share-link">分享</a>
       
       
       
@@ -484,60 +527,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" data-id="clis9zu7f0006dup1gi5y7d6p" data-title="文章推荐：The “const” Deception" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/05/08/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90%EF%BC%9Aconst/" data-id="cljnxzx9l0009c2oz9ufnhxfu" data-title="文章推荐：The “const” Deception" class="article-share-link">分享</a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-vite" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/05/vite/" class="article-date">
-  <time class="dt-published" datetime="2023-05-05T11:25:12.000Z" itemprop="datePublished">2023-05-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/05/vite/">vite</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>推荐回答：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/477139054/answer/2156019180">尤大的回应</a></p>
-<p>vite走的是no-bundle路线，他不像webpack走babel打包出很多bundle，然后直接从浏览器中引入这些bundle，vite则不需要走bundle，他直接使用浏览器支持的ESModule引入（script标签中type 为module (<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)%EF%BC%89">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)）</a></p>
-<ul>
-<li>能解析依赖关系，对于monorepo有良好的支持</li>
-<li>开发环境下使用ESM，代替打包，但有预构建功能，可以将 CommonJS &#x2F; UMD 转换为 ESM 格式</li>
-<li>ts自动配置，但不执行检查</li>
-</ul>
-<p>今日好文：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/DHeayzVwF_K9Oi9w_ae1lQ">何为技术</a></p>
-<p>vite开发环境：走预构建，将一个包的内部模块全部转化为一个ESmodule，目的是为了一个module就只发一个http请求</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/05/vite/" data-id="clis9zu7d0004dup155uq56fi" data-title="vite" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li></ul>
 
     </footer>
   </div>
@@ -565,7 +559,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hook/" rel="tag">hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" rel="tag">-技术记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hook/" rel="tag">hook</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag">容器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" rel="tag">文章推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag">日常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" rel="tag">每日思考&amp;问题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
     </div>
   </div>
 
@@ -575,7 +569,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">-技术记录</a> <a href="/tags/hook/" style="font-size: 10px;">hook</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" style="font-size: 10px;">工程化</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">文章推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 15px;">设计模式</a>
+      <a href="/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" style="font-size: 10px;">-技术记录</a> <a href="/tags/hook/" style="font-size: 10px;">hook</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 10px;">容器</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" style="font-size: 10px;">工程化</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">文章推荐</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 10px;">日常</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E6%80%9D%E8%80%83-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">每日思考&问题记录</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 15px;">设计模式</a>
     </div>
   </div>
 
@@ -584,7 +578,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li></ul>
     </div>
   </div>
 
@@ -597,11 +591,15 @@
       <ul>
         
           <li>
-            <a href="/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/">被认为是有害的</a>
+            <a href="/2023/07/04/docker/">docker</a>
           </li>
         
           <li>
-            <a href="/2023/06/12/hello-world/">Hello World</a>
+            <a href="/2023/07/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/12/%E8%A2%AB%E8%AE%A4%E4%B8%BA%E6%98%AF%E6%9C%89%E5%AE%B3%E7%9A%84/">被认为是有害的</a>
           </li>
         
           <li>
@@ -610,10 +608,6 @@
         
           <li>
             <a href="/2023/06/05/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">贝塞尔曲线</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/24/%E6%97%A5%E5%B8%B8%EF%BC%9A%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/">日常：关于编码问题</a>
           </li>
         
       </ul>
